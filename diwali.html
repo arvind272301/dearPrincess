@@ -38,10 +38,10 @@
       100% { transform: rotateY(360deg); }
     }
 
-    .card {
+    .card-block {
       background: rgba(255, 255, 255, 0.1);
       border-radius: 15px;
-      padding: 20px;
+      padding: 30px 20px;
       margin: 2em auto;
       width: 80%;
       max-width: 500px;
@@ -52,6 +52,19 @@
     .message {
       font-size: 1.2em;
       line-height: 1.6em;
+      margin-bottom: 1.5em;
+    }
+
+    .click-link {
+      font-size: 1.2em;
+      color: #ffcc00;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 2px solid #ffcc00;
+      border-radius: 8px;
+      display: inline-block;
+      box-shadow: 0 0 10px #ff6600;
+      transition: background 0.3s;
     }
 
     canvas {
@@ -65,22 +78,22 @@
 </head>
 <body>
   <h1>🎆 शुभ दीपावली 🎆</h1>
-  <div class="rotating-name">🌟💖 Renu 💖🌟</div>
+  <div class="rotating-name">🪔💖 Renu 💖🪔</div>
 
-  <div class="card">
+  <div class="card-block">
     <div class="message">
-      इस दीपावली तुम्हारी ज़िंदगी में खुशियों की बरसात हो,<br>
+      इस दीपावली आपकी ज़िंदगी में खुशियों की बरसात हो,<br>
       हर दिन रोशनी से जगमगाए, और हर पल मिठास से भर जाए।<br>
       आपकी मुस्कान ही मेरी सबसे बड़ी दिवाली है।<br>
       💖 शुभ दीपावली 💖
     </div>
+    <a href="./sorry.html" class="click-link">👉 Click Here</a>
   </div>
   <canvas id="confetti"></canvas>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
     const canvas = document.getElementById('confetti');
     const myConfetti = confetti.create(canvas, { resize: true });
-
     setInterval(() => {
       myConfetti({
         particleCount: 20,
@@ -89,11 +102,9 @@
         colors: ['#ffcc00', '#ff6600', '#ffffff']
       });
     }, 500);
-
-    // Wishes rain effect
     setInterval(() => {
       const wish = document.createElement('div');
-      wish.textContent = '✨ शुभकामनाएं ✨';
+      wish.textContent = '✨Renu✨';
       wish.style.position = 'fixed';
       wish.style.left = Math.random() * window.innerWidth + 'px';
       wish.style.top = '0px';
@@ -104,7 +115,6 @@
 
       wish.addEventListener('animationend', () => wish.remove());
     }, 800);
-
     const style = document.createElement('style');
     style.innerHTML = `
       @keyframes fall {
