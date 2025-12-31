@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +23,13 @@
     }
 
     @keyframes glow {
-      from { text-shadow: 0 0 10px #ff9999; }
-      to { text-shadow: 0 0 20px #ff3333; }
+      from {
+        text-shadow: 0 0 10px #ff9999;
+      }
+
+      to {
+        text-shadow: 0 0 20px #ff3333;
+      }
     }
 
     .image-container {
@@ -31,24 +37,55 @@
     }
 
     .image-container img {
-      width: 250px;
+      width: 80%;
+      max-width: 250px;
       border-radius: 15px;
       box-shadow: 0 0 20px #ff4444;
     }
 
     .message {
       font-size: 1.2em;
-      margin-top: 1.5em;
+      margin: 1.5em auto;
       color: #ffcccc;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2em;
+      }
+
+      .message {
+        font-size: 1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8em;
+        margin-top: 1.5em;
+      }
+
+      .message {
+        font-size: 0.95em;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="image-container">
     <img src="Sorry logo.png" alt="Sorry Logo">
   </div>
   <div class="message">
-    अगर मैंने आपको किसी भी तरह से आहत किया हो।
+    Yaar, agar meri kisi baat se tujhe dukh hua ho toh main dil se sorry bolta hoon.
+    kya kahu kahna to bahut kuch hai pr shabdo me bayaan nahi kar paunga bas itna samajh lo ki aap meri zindagi me bahut
+    khas ho or tujhe kabhi dukh nahi dena chahta mujhe maaf kar de or humari dosti
+    ko ek nayi shuruat de Happy New Year 2026 🎉🤗
+    please yar itni badi saja mt do mujhe. vaise bhi mai bahut dukhi hu aap ke bat na krne se.
   </div>
 </body>
+
 </html>
